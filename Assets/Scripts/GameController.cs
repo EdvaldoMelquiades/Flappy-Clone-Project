@@ -14,6 +14,15 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
     }
     
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+    
+    // Called if RestartButton is clicked.
     public void RestartGame()
     {
         SceneManager.LoadScene(0);
